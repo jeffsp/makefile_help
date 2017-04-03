@@ -5,8 +5,8 @@ This Makefile illustrates two techniques:
 1. .PHONY targets are specified directory above the target itself, rather than in a single list at the top of the Makefile. When you specify the .PHONY targets in a list at the top of the Makefile, the .PHONY list is very likely to become outdated as you add more targets and forget to add them to the list. By always specifying the .PHONY keyword above phony targets, your .PHONY list always stays up to date.
 
 ```Makefile
-    .PHONY: target1 # Target 1 help text
-    target1: target2 target3
+    .PHONY: target1
+    target1:
         @echo "Target 1"
 ```
 
