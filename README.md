@@ -1,7 +1,5 @@
 # Makefile help and .PHONY targets
 
-This is an example of a way to embed help strings into Makefiles.
-
 This Makefile illustrates two techniques:
 
 1. .PHONY targets are specified directory above the target itself, rather than in a single list at the top of the Makefile. When you specify the .PHONY targets in a list at the top of the Makefile, the .PHONY list is very likely to become outdated as you add more targets and forget to add them to the list. By always specifying the .PHONY keyword above phony targets, your .PHONY list always stays up to date.
