@@ -12,4 +12,4 @@ target3:
                                                                                                                          
 .PHONY: help # Generate list of targets with descriptions                                                                
 help:                                                                                                                    
-    @grep '^.PHONY: .* #' Makefile | sed 's/\.PHONY: \(.*\) # \(.*\)/\1 \2/'
+    @grep '^.PHONY: .* #' Makefile | sed 's/\.PHONY: \(.*\) # \(.*\)/\1 \2/' | expand -t20
