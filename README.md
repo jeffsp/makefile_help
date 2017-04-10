@@ -24,13 +24,13 @@ This Makefile illustrates two techniques:
     .PHONY: target3
     ...
     help: # Generate list of targets with descriptions
-        @grep '^.PHONY: .* #' Makefile | sed 's/\.PHONY: \(.*\) # \(.*\)/\1 \2/'
+        @grep '^.PHONY: .* #' Makefile | sed 's/\.PHONY: \(.*\) # \(.*\)/\1 \2/' | expand -t20
 ```
 # Example Invocation
 
 Here is the output from the 'help' target.
 
     $ make help
-    target1	Target 1 help text
-    target2	Target 2 help text
-    help	Generate list of targets with descriptions
+    target1             Target 1 help text
+    target2             Target 2 help text
+    help                Generate list of targets with descriptions
