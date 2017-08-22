@@ -2,7 +2,7 @@
 
 This Makefile illustrates two techniques:
 
-1. .PHONY targets are specified directory above the target itself, rather than in a single list at the top of the Makefile.
+1. .PHONY targets are specified directly above the target itself, rather than in a single list at the top of the Makefile.
 
    When you specify the .PHONY targets in a list at the top of the Makefile, the .PHONY list is very likely to become outdated as you add more targets and forget to add them to the list. By always specifying the .PHONY keyword above phony targets, your .PHONY list always stays up to date.
 
@@ -28,7 +28,7 @@ This Makefile illustrates two techniques:
 ```
 # Example Invocation
 
-Here is the output from the 'help' target.
+Here is the output from the 'help' target. Note that target3 help is not listed because it has no help text.
 
     $ make help
     target1             Target 1 help text
